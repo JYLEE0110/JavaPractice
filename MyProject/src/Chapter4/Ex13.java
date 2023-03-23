@@ -7,18 +7,18 @@ public class Ex13 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-//		int num = 2;
-		
-//		for(int i = 1; i<=9; i++) {
-//			for(int j = 2; j<=9; j++) {
-//				if((j%2 == 0)) {
-//					if(j>=i)
-//					System.out.printf("%d*%d=%d\t", j, i, i*j);
-//				}
-//			}
-//			System.out.println();
-//		}
+
+
+		for(int i = 1; i<=9; i++) {
+			if(((i%2 == 0) && (i%6!=0))) {
+				for(int j = 1; j<=9; j++) {
+					if(i>=j)
+						System.out.printf("%d*%d=%d\t",i,j,i*j);
+				}
+				System.out.println();
+			}
+
+		}
 	}
 
 }
