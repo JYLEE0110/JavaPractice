@@ -1,5 +1,7 @@
 package Chapter4;
 
+import java.util.Scanner;
+
 //다음과 같이 출력이 이루어지도록 작성해보자.
 //
 //num < 0 이라면 “0 미만” 출력
@@ -12,29 +14,27 @@ package Chapter4;
 //
 //300 ≤ num 이라면 “300이상 “ 출력
 
-class Range{
+class Range {
 	int num;
-	
-	Range(){}
-	
-	Range(int num){
+
+	Range() {
+	}
+
+	Range(int num) {
 		this.num = num;
 	}
-	
+
 	void displayRange() {
-		if(num < 0) {
-			System.out.println("0미만");
-		}
-		else if(num<100) {
-			System.out.println("0이상 100미만 출력");
-		}
-		else if(num<200) {
-			System.out.println("100이상 200미만 출력");
-		}
-		else if(num<300) {
-			System.out.println("200이상 300미만 출력");
-		}else {
-			System.out.println("300이상");
+		if (num < 0) {
+			System.out.printf("%d(은/는) 0미만", num);
+		} else if (num < 100) {
+			System.out.printf("%d(은/는) 0이상 100미만", num);
+		} else if (num < 200) {
+			System.out.printf("%d(은/는) 100이상 200미만", num);
+		} else if (num < 300) {
+			System.out.printf("%d(은/는) 200이상 300미만", num);
+		} else {
+			System.out.printf("%d(은/는) 300이상", num);
 		}
 	}
 }
@@ -43,9 +43,16 @@ public class Ex02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		Range num1 = new Range(120); 
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("Input number : ");
+		int num = scan.nextInt();
+
+		Range num1 = new Range(num);
 		num1.displayRange();
+		
+		scan.close();
 	}
 
 }

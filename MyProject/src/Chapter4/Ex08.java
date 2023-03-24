@@ -7,18 +7,18 @@ public class Ex08 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		int num = 1;
 		int sum = 0;
-		
-		while(num<=1000) {
-			if((num%2 == 0) && (num%7==0)) {
+
+		while (num <= 1000) {
+			if ((num % 2 == 0) && (num % 7 == 0)) {
 				System.out.println(num);
-				sum+=num;
+				sum += num;
 			}
 			num++;
 		}
-		System.out.printf("합은 %d",sum);
+		System.out.printf("합은 %d", sum);
 	}
 
 }

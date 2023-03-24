@@ -10,17 +10,17 @@ public class Ex12 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		int sum = 0;
 		int count = 0;
-		
-		while(true) {
+
+		while (true) {
 			count++;
-			
-			if((count%2 ==1) || ((count%3 == 0) && (count%2==0))) {
-				sum+=count;
+
+			if ((count % 2 == 1) || ((count % 3 == 0) && (count % 2 == 0))) {
+				sum += count;
 			}
-			if(sum>1000) {
+			if (sum > 1000) {
 				System.out.println(count);
 				System.out.println(sum);
 				break;
