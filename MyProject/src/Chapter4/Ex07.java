@@ -28,8 +28,6 @@ public class Ex07 {
 
 		cnt--;
 
-		System.out.println();
-
 		do {
 			cnt--;
 			System.out.println(cnt);

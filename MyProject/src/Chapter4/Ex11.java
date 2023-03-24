@@ -40,6 +40,11 @@ public class Ex11 {
 			}
 			System.out.print("[" + i + "]");
 			count++;
+
+//			if ((i % 5 == 0) && (i % 7 == 0)) {
+//				System.out.print("[" + i + "]");
+//				count++;
+//			}
 		}
 		System.out.println();
 		System.out.println("total : " + count + "개 입니다.");

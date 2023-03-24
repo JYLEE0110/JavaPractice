@@ -1,23 +1,23 @@
 package Chapter4;
 
+//다음 식을 만족하는 조합을 찾는 프로그램 작성. 
+//
+//  A B
+//+ B A
+//------
+//  9 9
+
 public class Ex14 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//		int numA;
-		//		int numB;
 
-		for(int i = 1; i<=9; i++) {
-			for(int j=1; j<=9; j++) {
-				int num1=i*10+j;
-				int num2=j*10+i;
-				int sum = num1 + num2;
-				
-				if(num1+num2 == 99) {
-					System.out.printf("%d + %d = %d\n",num1, num2, sum);
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 10; j++) {
+				if ((i + j) == 9) {
+					System.out.printf("i = %d , j = %d\n", i, j);
 				}
 			}
 		}
 	}
-
 }
