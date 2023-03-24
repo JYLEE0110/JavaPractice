@@ -9,14 +9,14 @@ package Chapter1;
 class MemberInfo {
 	static int currentYear = 2023;
 	
-	int birthYear;
 	String name;
+	int birthYear;
 	int age;
 	double height;
 	boolean hasBook;
 
 	MemberInfo() {
-		this.age = currentYear-this.birthYear;
+//		this.age = currentYear-this.birthYear+1;
 	}
 
 	MemberInfo(String name,int birthYear, double height, boolean hasBook) {
