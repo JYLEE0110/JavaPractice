@@ -11,7 +11,7 @@ class IfReit{
 	
 	void displayPosEven() {
 		if((num>0) && (num%2 == 0)) {
-			System.out.println("양수이면서 짝수");
+			System.out.printf("%d은 양수이면서 짝수", num);
 		}
 	}
 }
