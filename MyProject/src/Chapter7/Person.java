@@ -2,7 +2,7 @@ package Chapter7;
 
 public class Person {
 
-	private static int currentYear = 2023;
+	private static final int  CURRENT_YEAR = 2023;
 	private String name;
 	private String registrationNum;
 
