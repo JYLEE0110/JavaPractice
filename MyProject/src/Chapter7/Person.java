@@ -32,7 +32,7 @@ public class Person {
 	}
 
 	public void printInfo() {
-		System.out.print("안녕하세요 저는 " + getName() + " 이고 " + calAge() + "살 입니다. ");
+		System.out.print("안녕하세요 저는 " + name + " 이고 " + calAge() + "살 입니다. ");
 	}
 
 	// 나이를 구하는 메솓,
