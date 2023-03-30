@@ -7,6 +7,10 @@ public class Student {
 	private int engScore;
 	private int mathScore;
 
+	public Student() {
+
+	}
+
 	public Student(String name, int korScore, int engScore, int mathScore) {
 		super();
 		this.name = name;
@@ -47,25 +51,28 @@ public class Student {
 		this.mathScore = mathScore;
 	}
 
-	
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", korScore=" + korScore + ", engScore=" + engScore + ", mathScore="
-				+ mathScore + "]";
+		return result();
 	}
 
-	//총 합을 구하는 메소드
-	public int sumScore() {
+	// 총 합을 구하는 메소드
+	private int sumScore() {
 		int totalScore = korScore + engScore + mathScore;
 
 		return totalScore;
 	}
-	//평균을 구하는 메소드
-	public float avgScore() {
-		int totalScore = sumScore();
-		float avg = totalScore / (float) 3;
 
+	// 평균을 구하는 메소드 소수점 아래2번째 까지 출력하기 위하여 String으로 반환(StringFormat 함수쓰기 위하여)
+	private float avgScore() {
+		int totalScore = sumScore();
+		 float avg = Float.parseFloat(String.format("%.2f", totalScore / (float) 3));
+		
 		return avg;
+	}
+
+	public String result() {
+		return name+"\t"+ korScore + "\t" + engScore + "\t" + mathScore + "\t" + sumScore() + "\t" + avgScore();
 	}
 
 }
