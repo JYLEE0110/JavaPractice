@@ -49,10 +49,10 @@ public class Person {
 
 		if ((yearCheck == '1') || (yearCheck == '2')) {
 			int birth = registCheck2 + 1900;
-			return currentYear - birth;
+			return CURRENT_YEAR - birth;
 		} else if ((yearCheck == '3') || (yearCheck == '4')) {
 			int birth = registCheck2 + 2000;
-			return currentYear - birth;
+			return CURRENT_YEAR - birth;
 		} else
 			return 0;
 	}
