@@ -20,7 +20,7 @@ public class ExceptionIntType {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
-		
+		scan.close();
 		System.out.println("프로그램 종료");
 	}
 
