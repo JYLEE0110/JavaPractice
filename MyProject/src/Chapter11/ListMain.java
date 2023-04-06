@@ -2,7 +2,7 @@ package Chapter11;
 
 import java.util.*;
 
-public class FootballPlayerMain {
+public class ListMain {
 
 	public static void main(String[] args) {
 

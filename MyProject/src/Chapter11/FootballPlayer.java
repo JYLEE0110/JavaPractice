@@ -1,6 +1,6 @@
 package Chapter11;
 
-public class FootballPlayer {
+public class FootballPlayer implements Comparable<FootballPlayer> {
 
 	private String name;
 	private int number;
@@ -53,6 +53,36 @@ public class FootballPlayer {
 	@Override
 	public String toString() {
 		return name + "\t" + number + "번\t" + team + "\t" + age + "세";
+	}
+
+	@Override
+	public int hashCode() {
+		// 이름의 마지막문자 유니코드
+		return name.charAt(2);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		boolean result = false;
+
+		if (obj != null && obj instanceof FootballPlayer p) {
+			p = (FootballPlayer) obj;
+			result = (name.equals(p.getName()) && age == p.getAge()) && team.equals(p.getTeam());
+		}
+		return result;
+	}
+
+	@Override
+	public int compareTo(FootballPlayer o) {
+		int compare = team.compareTo(o.getTeam());
+
+		if (compare == 0) {
+			compare = name.compareTo(o.getName());
+			if (compare == 0) {
+				compare = number - o.getNumber();
+			}
+		}
+		return compare;
 	}
 
 }
