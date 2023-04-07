@@ -68,7 +68,7 @@ public class FootballPlayer implements Comparable<FootballPlayer> {
 	@Override
 	public int hashCode() {
 		// 이름의 마지막문자 유니코드
-		return name.charAt(2);
+		return age;
 	}
 
 	@Override
